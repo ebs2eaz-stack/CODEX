@@ -142,7 +142,8 @@ textarea {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background:  linear-gradient(90deg, rgba(20, 55, 95, 0.94), rgba(20, 55, 95, 0.35));
+  background:  background: linear-gradient(90deg, rgba(20, 55, 95, 0.94), rgba(20, 55, 95, 0.35));
+
 
 }
 
