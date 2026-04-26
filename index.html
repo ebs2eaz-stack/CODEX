@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Northstar IT | Managed IT, Cybersecurity, and Support</title>
+    <meta name="description" content="A complete IT business website with service booking and business dashboard.">
+    <link rel="preload" href="assets/it-hero.png" as="image">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Northstar IT home">
+        <span class="brand-mark">N</span>
+        <span>
+          <strong>Northstar IT</strong>
+          <small>Business technology support</small>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#services">Services</a>
+        <a href="#booking">Book</a>
+        <a href="#dashboard">Dashboard</a>
+      </nav>
+      <a class="header-action" href="#booking">Schedule</a>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <img src="assets/it-hero.png" alt="Modern IT support workspace with laptops and networking equipment">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Managed IT for growing teams</p>
+          <h1>Practical, fast IT support for businesses that cannot afford downtime.</h1>
+          <p class="hero-copy">Keep devices healthy, networks stable, and security monitored with a local IT partner built for everyday business operations.</p>
+          <div class="hero-actions">
+            <a class="primary-btn" href="#booking">Book service</a>
+            <a class="secondary-btn" href="#dashboard">View dashboard</a>
+          </div>
+          <dl class="hero-stats" aria-label="Business highlights">
+            <div><dt>18 min</dt><dd>average first response</dd></div>
+            <div><dt>24/7</dt><dd>monitoring available</dd></div>
+            <div><dt>96%</dt><dd>same-day resolution</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="section services" id="services">
+        <div class="section-heading">
+          <p class="eyebrow">Services</p>
+          <h2>Everything a small business needs to stay secure and productive.</h2>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">+</span>
+            <h3>Helpdesk Support</h3>
+            <p>Remote and onsite troubleshooting for laptops, printers, email, access issues, and day-to-day staff support.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">#</span>
+            <h3>Network Management</h3>
+            <p>Wi-Fi, firewalls, backups, device health, and uptime checks tuned for reliable office operations.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">*</span>
+            <h3>Cybersecurity</h3>
+            <p>Endpoint protection, MFA setup, phishing defense, security reviews, and practical policy guidance.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">^</span>
+            <h3>Cloud & Microsoft 365</h3>
+            <p>Mailbox migrations, permissions, shared drives, Teams, OneDrive, and licensing cleanup.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="split-section" id="booking">
+        <div class="booking-intro">
+          <p class="eyebrow">Booking</p>
+          <h2>Request an appointment in under a minute.</h2>
+          <p>Pick the service, preferred time, urgency, and contact details. New bookings appear instantly in the business dashboard below.</p>
+          <div class="promise-list">
+            <span>Response window confirmed by email</span>
+            <span>No surprise onsite fees</span>
+            <span>Priority triage for outages</span>
+          </div>
+        </div>
+
+        <form class="booking-form" id="bookingForm">
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required placeholder="Jordan Lee">
+          </div>
+          <div class="form-row">
+            <label for="company">Company</label>
+            <input id="company" name="company" type="text" autocomplete="organization" required placeholder="Lee Dental Group">
+          </div>
+          <div class="form-grid">
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required placeholder="jordan@example.com">
+            </div>
+            <div class="form-row">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="(555) 014-2210">
+            </div>
+          </div>
+          <div class="form-grid">
+            <div class="form-row">
+              <label for="service">Service</label>
+              <select id="service" name="service" required>
+                <option value="">Choose a service</option>
+                <option>Helpdesk Support</option>
+                <option>Network Management</option>
+                <option>Cybersecurity Review</option>
+                <option>Microsoft 365 Support</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="urgency">Urgency</label>
+              <select id="urgency" name="urgency" required>
+                <option>Standard</option>
+                <option>Priority</option>
+                <option>Emergency</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-grid">
+            <div class="form-row">
+              <label for="date">Preferred date</label>
+              <input id="date" name="date" type="date" required>
+            </div>
+            <div class="form-row">
+              <label for="time">Preferred time</label>
+              <input id="time" name="time" type="time" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="details">What is happening?</label>
+            <textarea id="details" name="details" rows="4" required placeholder="A few staff members cannot access email, and one laptop is running slowly."></textarea>
+          </div>
+          <button class="primary-btn full-btn" type="submit">Submit booking</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="section dashboard" id="dashboard">
+        <div class="section-heading dashboard-heading">
+          <div>
+            <p class="eyebrow">Business Dashboard</p>
+            <h2>See appointments, tickets, revenue signals, and operations at a glance.</h2>
+          </div>
+          <div class="dashboard-actions">
+            <button class="icon-btn" id="seedBtn" type="button" title="Add sample booking" aria-label="Add sample booking">+</button>
+            <button class="icon-btn" id="clearBtn" type="button" title="Clear bookings" aria-label="Clear bookings">x</button>
+          </div>
+        </div>
+
+        <div class="metric-grid">
+          <article class="metric">
+            <span>Open bookings</span>
+            <strong id="bookingCount">0</strong>
+            <small id="bookingDelta">Ready for intake</small>
+          </article>
+          <article class="metric">
+            <span>Monthly revenue</span>
+            <strong>$18.4k</strong>
+            <small>+12% from last month</small>
+          </article>
+          <article class="metric">
+            <span>Ticket health</span>
+            <strong>94%</strong>
+            <small>met SLA target</small>
+          </article>
+          <article class="metric">
+            <span>Security alerts</span>
+            <strong>3</strong>
+            <small>all low severity</small>
+          </article>
+        </div>
+
+        <div class="dashboard-layout">
+          <section class="panel">
+            <div class="panel-head">
+              <h3>Upcoming bookings</h3>
+              <select id="bookingFilter" aria-label="Filter bookings by urgency">
+                <option>All</option>
+                <option>Emergency</option>
+                <option>Priority</option>
+                <option>Standard</option>
+              </select>
+            </div>
+            <div class="booking-list" id="bookingList"></div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-head">
+              <h3>Operations</h3>
+              <span class="status-pill">Live</span>
+            </div>
+            <div class="pipeline">
+              <div>
+                <span>New</span>
+                <div class="bar"><i style="width: 68%"></i></div>
+              </div>
+              <div>
+                <span>Assigned</span>
+                <div class="bar"><i style="width: 52%"></i></div>
+              </div>
+              <div>
+                <span>Waiting on client</span>
+                <div class="bar"><i style="width: 26%"></i></div>
+              </div>
+              <div>
+                <span>Closed</span>
+                <div class="bar"><i style="width: 84%"></i></div>
+              </div>
+            </div>
+            <div class="task-list">
+              <label><input type="checkbox" checked> Review endpoint alerts</label>
+              <label><input type="checkbox"> Follow up on backup report</label>
+              <label><input type="checkbox"> Prepare onsite kit</label>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Northstar IT</p>
+      <p>Managed support, cybersecurity, cloud, and onsite service for local businesses.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
