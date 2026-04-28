@@ -1,7 +1,8 @@
 :root {
   --ink: #18202a;
   --muted: #637082;
-  --paper: #f7f9fb;
+  --paper: #eaf1f5;  /* soft blue-grey */
+
   --panel: #ffffff;
   --line: #dbe2ea;
   --teal: #147e8d;
