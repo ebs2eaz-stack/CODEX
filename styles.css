@@ -180,8 +180,9 @@ h1 {
 .hero-copy {
   max-width: 620px;
   margin-bottom: 28px;
-  color: #000000;
+  color: #0f5d68;
   font-size: clamp(1rem, 2.2vw, 1.3rem);
+  font-weight: 700;
 }
 
 .hero-actions {
